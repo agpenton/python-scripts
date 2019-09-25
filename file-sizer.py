@@ -2,6 +2,7 @@ import os
 
 
 workfol = input ("Enter the folder to scan: ")
+
 totalSize = []
 
 for filename in os.listdir(input ('workfol'):
