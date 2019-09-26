@@ -1,4 +1,5 @@
 from __future__ import print_function
+from pathlib import Path
 import glob
 import fnmatch
 import logging
@@ -9,7 +10,11 @@ logger = logging.getLogger('devops')
 
 myrootdir = input ("Enter the folder to scan: ")
 result = []
-reg_compile = re.compile(input("enter name or extension of file: "))
+regex = fnmatch.translate(input("enter name or extension of file: "))
+print(regex)
+reg_compile = re.compile(regex)
+print(reg_compile)
+# reg_compile = re.compile(input("enter name or extension of file: "))
 while True:
     try:
         for dirpath, dirnames, filenames in os.walk(myrootdir):
