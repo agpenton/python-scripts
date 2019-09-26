@@ -19,7 +19,7 @@ while True:
     try:
         for dirpath, dirnames, filenames in os.walk(myrootdir):
             result = result + [dirname for dirname in dirnames if  reg_compile.match(dirname)]
-            # logger.debug('this is what i found %f', result)
+            logger.debug('this is what i found %f', result)
     except ValueError:
         print("Error!! You miss one of the options. Try again.")
     else:
